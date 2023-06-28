@@ -51,7 +51,7 @@ type ApplyPolicyConfig struct {
 	ValidatingAdmissionPolicy v1alpha1.ValidatingAdmissionPolicy
 	Resource                  *unstructured.Unstructured
 	// Variables                 map[string]interface{}
-	PolicyReport				 bool
+	PolicyReport		     bool
 	// NamespaceSelectorMap      map[string]map[string]string
 	// Stdin                     bool
 	// PrintPatchResource        bool
