@@ -51,7 +51,7 @@ type ApplyPolicyConfig struct {
 	ValidatingAdmissionPolicy v1alpha1.ValidatingAdmissionPolicy
 	Resource                  *unstructured.Unstructured
 	// Variables                 map[string]interface{}
-	PolicyReport              bool
+	PolicyReport bool
 	// NamespaceSelectorMap      map[string]map[string]string
 	// Stdin                     bool
 	// PrintPatchResource        bool
@@ -185,7 +185,8 @@ func (s *BackgroundScanner) scanValidatingAdmissionPolicies() error {
 
 	for _, policy := range validatingPolicies.Items {
 		// Perform scanning logic here for each policy
-		// ...
+		//...
+		//policy.RunBackgroundScan()
 
 		// Record an event for the scanned policy
 		s.eventRecorder.Event(&policy, v1.EventTypeNormal, "Scanned", "ValidatingAdmissionPolicy scanned successfully")
